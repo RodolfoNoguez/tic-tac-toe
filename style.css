@@ -1,0 +1,53 @@
+/*STYLES*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    padding: 20px;
+    height: 700px;
+    background-color: rgb(196, 77, 77);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 50px;
+}
+
+.game-board {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    justify-items: center;
+    align-items: center;
+}
+
+.game-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.game-square:hover {
+    background-color: lightgray;
+}
+
+.game-square:nth-child(3n) {
+    border-right: none;
+}
+
+.game-square:nth-child(n + 7) {
+    border-bottom: none;
+}
